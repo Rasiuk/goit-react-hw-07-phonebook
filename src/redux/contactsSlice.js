@@ -48,28 +48,9 @@ const contactsSlice = createSlice({
       state.isLoading = false;
     },
   },
-  //   reducers: {
-  //     addContact(state, action) {
-  //       const existingContact = state.contacts.find(
-  //         contact => contact.name === action.payload.name
-  //       );
-  //       if (existingContact) {
-  //         alert(`${action.payload.name} is already in contacts`);
-  //         return;
-  //       }
-  //       state.contacts.push(action.payload);
-  //     },
-  //     deleteContact(state, action) {
-  //       const index = state.contacts.findIndex(
-  //         contact => contact.contactId === action.payload
-  //       );
-  //       state.contacts.splice(index, 1);
-  //     },
-  //   },
 });
 
 export const contactReducer = contactsSlice.reducer;
-// export const { addContact, deleteContact } = contactsSlice.actions;
 // Selectors
 export const getContacts = state => state.contacts.contacts;
 export const getLoadin = state => state.contacts.isLoading;
